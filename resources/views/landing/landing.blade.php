@@ -48,8 +48,8 @@
         <!-- Slide 3 -->
         <div class="carousel-item">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">What is PSI?</h2>
-            <p class="animate__animated animate__fadeInUp">Preferenced selection index (PSI) is a method used to determine the most suitable job for someone based on their abilities, interests, and experience. PSI measures how well a job fits with a person's profile, and by using this method, PSIwizard helps you make better decisions in your job search. Discover the best job opportunities for you with PSIwizard.</p>
+            <h2 class="animate__animated animate__fadeInDown">What is PSIwizard?</h2>
+            <p class="animate__animated animate__fadeInUp">PSIWizard is a job search tool that uses a multi-criteria decision-making method to generate a list of suitable jobs for users based on their abilities, interests, and work experience. By inputting multiple job alternatives and setting criteria scores, the tool provides a list of job matches that align with the user's profile, making it easier to find suitable employment quickly and accurately.</p>
             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
@@ -106,105 +106,64 @@
                 </div>
               </section>
               <!-- End About Section -->
-              <!-- ======= Counts Section ======= -->
-              <section id="counts" class="counts">
-                <div class="container" data-aos="fade-up">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                      <div class="count-box">
-                        <i class="bi bi-file-check-fill" style="color: #fb6340;"></i>
-                        <div>
-                          <span data-purecounter-start="0" data-purecounter-end="{{ $count }}" data-purecounter-duration="1" class="purecounter"></span>
-                          <p>Solved Case</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- End Counts Section -->
-              <!-- ======= Contact Section ======= -->
-              <section id="contact" class="contact">
+              <section id="team" class="team">
                 <div class="container">
                   <div class="section-title" data-aos="zoom-out">
-                    <h2>Contact</h2>
-                    <p>Contact Us</p>
+                    <h2>Team</h2>
+                    <p>Our Hardworking Team</p>
                   </div>
-                  <div class="row gy-4" data-aos="fade-up">
-                    <div class="col-lg-6">
-                      <div class="row gy-4">
-                        <div class="col-md-6">
-                          <div class="info-box">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <h3>Address</h3>
-                            <p>Soekarno-Hatta Street,<br> No. 9, Malang, East Java, 65141</p>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                      <div class="member" data-aos="fade-up">
+                        <div class="member-img">
+                          <img src="assets/img/team/me.jpg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href="https://github.com/Ionic12"><i class="bi bi-github"></i></a>
                           </div>
                         </div>
-                        <div class="col-md-6">
-                          <div class="info-box">
-                            <i class="bi bi-telephone-fill"></i>
-                            <h3>Call Us</h3>
-                            <p>+1 2345 67891 01<br>+6 2896 303037 41</p>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="info-box">
-                            <i class="bi bi-envelope-fill"></i>
-                            <h3>Email Us</h3>
-                            <p>psiwizard@wizard.com<br>wizard@wizard.com</p>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="info-box">
-                            <i class="bi bi-clock-fill"></i>
-                            <h3>Open Hours</h3>
-                            <p>Monday - Friday<br>9:00AM - 08:00AM</p>
-                          </div>
+                        <div class="member-info">
+                          <h4>Iqshan Bagus Prasetyo</h4>
+                          <span>Full Stack Developer</span>
                         </div>
                       </div>
-                      
                     </div>
-                    
-                    <div class="col-lg-6" data-aos="fade-up">
-                      <form action="forms/contact.php" method="post" class="php-email-form">
-                        <div class="row gy-4">
-                          
-                          <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                          </div>
-                          
-                          <div class="col-md-6 ">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                          </div>
-                          
-                          <div class="col-md-12">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                          </div>
-                          
-                          <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                          </div>
-                          
-                          <div class="col-md-12 text-center">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                            
-                            <button type="submit">Send Message</button>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                      <div class="member" data-aos="fade-up">
+                        <div class="member-img">
+                          <img src="assets/img/team/azmi.jpg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href="https://github.com/2azmi2"><i class="bi bi-github"></i></a>
                           </div>
                         </div>
-                      </form>
+                        <div class="member-info">
+                          <h4>R. M. Azmi Herdi S</h4>
+                          <span>Back End Developer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                      <div class="member" data-aos="fade-up">
+                        <div class="member-img">
+                          <img src="assets/img/team/favian.jpg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href="https://github.com/favianapta"><i class="bi bi-github"></i></a>
+                          </div>
+                        </div>
+                        <div class="member-info">
+                          <h4>M. Favian Apta</h4>
+                          <span>Front End Developer</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
-              <!-- End Contact Section -->
             </main>
             <!-- ======= Footer ======= -->
             <footer id="footer" >
               <div class="container">
                 <div class="copyright">
-                  &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
+                  &copy; Copyright <strong><span>PSIwizard</span></strong>. All Rights Reserved
                 </div>
               </div>
             </footer><!-- End Footer -->

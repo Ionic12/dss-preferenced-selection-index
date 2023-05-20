@@ -32,7 +32,8 @@
                                 <h2 id="heading">How it Works</h2>
                                 <div class="row row justify-content-center">
                                     <div class="col-10">
-                                        <p class="text-center">The Preferences Index Selection (PSI) method is used to develop decision support systems (DSS) that utilize computer support in the decision-making process. According to experts, a DSS is a system that utilizes data and decision models to solve semi-structured and unstructured problems, thus aiding in decision-making. Developing a DSS with the PSI method involves establishing criteria and performing calculations to obtain necessary data for informed decision-making.</p>
+                                        <p class="text-center">
+                                            The Preferences Index Selection (PSI) method is employed to create decision support systems (DSS) that leverage computer assistance in the decision-making process. DSS is a system that utilizes data and decision models to address semi-structured and unstructured problems, facilitating decision-making. Developing a DSS with the PSI method entails defining criteria and conducting calculations to acquire relevant data for well-informed decision-making. These steps are derived from the article <a style="text-decoration: none; color: #fb6340;" href="https://ijcis.net/index.php/ijcis/article/view/55">"Selection Index (PSI) Method in Developing a Student Scholarship Decision Support System."</a></p>
                                     </div>
                                 </div>
                                 <div id="msform">
@@ -1166,9 +1167,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
                                         <div class="row justify-content-center">
                                             <div class="col-10">
                                                 <p>

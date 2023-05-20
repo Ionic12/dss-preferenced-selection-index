@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CasesController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\ResetPassword;
+use App\Http\Controllers\ChangePassword;            
 use App\Models\Cases;
 
 /*
@@ -29,20 +36,9 @@ Route::get('/psi', function () {
 Route::get('/how-it-works', function () {
 	return view('landing.step');
 });
-Route::get('/result', function () {
-	return view('landing.result');
-})->name('result');
+
 Route::post('/cases', [CasesController::class, 'store'])->name('cases.store');
-Route::get('/normalizing', [CasesController::class, 'normalizing'])->name('cases.normalizing');
-
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\ResetPassword;
-use App\Http\Controllers\ChangePassword;            
-
+Route::get('/result', [CasesController::class, 'normalizing'])->name('cases.normalizing');
 
 // Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');

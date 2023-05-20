@@ -251,7 +251,7 @@ class CasesController extends Controller
         $primarykey = Session::get('primarykey');
         $cases = DB::table('cases')->where('cases_id', $primarykey)->get();
         
-        // menghitung nilai maksimum
+        // mencari nilai maximum pada setiap kriteria
         $maxValues = array();
         for ($i = 1; $i <= 20; $i++) {
             for ($j = 1; $j <= 10; $j++) {
@@ -268,7 +268,7 @@ class CasesController extends Controller
             }
         }
         
-        // menghitung nilai minimum
+        // mencari nilai minimum pada setiap kriteria
         $minValues = array();
         for ($i = 1; $i <= 20; $i++) {
             for ($j = 1; $j <= 10; $j++) {
@@ -379,38 +379,21 @@ class CasesController extends Controller
         DB::table('normalisasi')->updateOrInsert(['cases_id' => $primarykey], $data);
         
         // menyimpan hasil penjumlahan ke dalam database
-        $sum1 = DB::table('sum1')->where('cases_id', $primarykey)->first();
-        
-        if ($sum1) {
-            // data sudah ada, lakukan update
-            DB::table('sum1')->where('cases_id', $primarykey)->update([
-            'm1' => $total_n1,
-            'm2' => $total_n2,
-            'm3' => $total_n3,
-            'm4' => $total_n4,
-            'm5' => $total_n5,
-            'm6' => $total_n6,
-            'm7' => $total_n7,
-            'm8' => $total_n8,
-            'm9' => $total_n9,
-            'm10' => $total_n10,
-            ]);
-        } else {
-            // data belum ada, lakukan insert
-            DB::table('sum1')->insert([
-            'cases_id' => $primarykey, 
-            'm1' => $total_n1,
-            'm2' => $total_n2,
-            'm3' => $total_n3,
-            'm4' => $total_n4,
-            'm5' => $total_n5,
-            'm6' => $total_n6,
-            'm7' => $total_n7,
-            'm8' => $total_n8,
-            'm9' => $total_n9,
-            'm10' => $total_n10,
-            ]);
-        }
+        DB::table('sum1')->updateOrInsert(
+            ['cases_id' => $primarykey],
+            [
+                'm1' => $total_n1,
+                'm2' => $total_n2,
+                'm3' => $total_n3,
+                'm4' => $total_n4,
+                'm5' => $total_n5,
+                'm6' => $total_n6,
+                'm7' => $total_n7,
+                'm8' => $total_n8,
+                'm9' => $total_n9,
+                'm10' => $total_n10,
+            ]
+        );
         
         // menghitung rata - rata
         $mean1 = $total_n1 / 20;
@@ -622,38 +605,21 @@ class CasesController extends Controller
         $w9 = $𝛺9 / $𝛺total;
         $w10 = $𝛺10 / $𝛺total;
         
-        $weight = DB::table('weight')->where('cases_id', $primarykey)->first();
-        
-        if ($weight) {
-            // data sudah ada, lakukan update
-            DB::table('weight')->where('cases_id', $primarykey)->update([
-            'weight1' => $w1,
-            'weight2' => $w2,
-            'weight3' => $w3,
-            'weight4' => $w4,
-            'weight5' => $w5,
-            'weight6' => $w6,
-            'weight7' => $w7,
-            'weight8' => $w8,
-            'weight9' => $w9,
-            'weight10' => $w10,
-            ]);
-        } else {
-            // data belum ada, lakukan insert
-            DB::table('weight')->insert([
-            'cases_id' => $primarykey, 
-            'weight1' => $w1,
-            'weight2' => $w2,
-            'weight3' => $w3,
-            'weight4' => $w4,
-            'weight5' => $w5,
-            'weight6' => $w6,
-            'weight7' => $w7,
-            'weight8' => $w8,
-            'weight9' => $w9,
-            'weight10' => $w10,
-            ]);
-        }
+        DB::table('weight')->updateOrInsert(
+        ['cases_id' => $primarykey],
+        [
+        'weight1' => $w1,
+        'weight2' => $w2,
+        'weight3' => $w3,
+        'weight4' => $w4,
+        'weight5' => $w5,
+        'weight6' => $w6,
+        'weight7' => $w7,
+        'weight8' => $w8,
+        'weight9' => $w9,
+        'weight10' => $w10,
+        ]
+        );
         
         // count psi
         $psi1 = array();
