@@ -23,4 +23,4 @@ PSIwizard memberikan kemudahan dan kecepatan dalam mencari pekerjaan yang cocok 
   
 </div>
 
-<img src="dss2.png" />
+<img src="DSS1.png" />
