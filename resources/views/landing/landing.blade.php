@@ -169,6 +169,11 @@
             </footer><!-- End Footer -->
           </section>
         </main>
+        <style>
+          ::-webkit-scrollbar {
+            width: 0px;
+          }
+        </style>
         
         @endsection
         

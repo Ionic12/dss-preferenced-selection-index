@@ -826,6 +826,9 @@
             background-color: #fb6340; /* background orange ketika di hover */
             color: #fff; /* warna teks putih ketika di hover */
         }
+          ::-webkit-scrollbar {
+            width: 0px;
+          }
     </style>
     @endsection
     
