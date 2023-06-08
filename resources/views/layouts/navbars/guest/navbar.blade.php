@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-12">
             <!-- Navbar -->
-            <nav
-                class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
+            <nav style="margin-right: 0.9%;margin-left: 0.9%"
+                class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0">
                 <div class="container-fluid">
                     <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="/landing#hero">
                         PSIwizard
