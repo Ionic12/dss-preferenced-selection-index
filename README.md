@@ -27,5 +27,5 @@ PSIwizard memberikan kemudahan dan kecepatan dalam mencari pekerjaan yang cocok 
 
 ### Team
 * [@R M Azmi Herdi S](https://github.com/2azmi2)
-* [@RM Favian Apta](https://github.com/favianapta)
+* [@M Favian Apta](https://github.com/favianapta)
 
