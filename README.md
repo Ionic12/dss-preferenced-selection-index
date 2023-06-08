@@ -24,3 +24,8 @@ PSIwizard memberikan kemudahan dan kecepatan dalam mencari pekerjaan yang cocok 
 </div>
 
 <img src="PPT/Frame 7.png" />
+
+### Team
+* [@R M Azmi Herdi S](https://github.com/2azmi2)
+* [@RM Favian Apta](https://github.com/favianapta)
+
