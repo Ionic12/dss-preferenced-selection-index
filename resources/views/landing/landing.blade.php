@@ -118,7 +118,7 @@
                         <div class="member-img">
                           <img src="assets/img/team/me.jpg" class="img-fluid" alt="">
                           <div class="social">
-                            <a href="https://github.com/Ionic12"><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/Ionic12"><i class="bi bi-github" style="font-size: 20px;"></i></a>
                           </div>
                         </div>
                         <div class="member-info">
@@ -132,7 +132,7 @@
                         <div class="member-img">
                           <img src="assets/img/team/azmi.jpg" class="img-fluid" alt="">
                           <div class="social">
-                            <a href="https://github.com/2azmi2"><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/2azmi2"><i class="bi bi-github" style="font-size: 20px;"></i></a>
                           </div>
                         </div>
                         <div class="member-info">
@@ -146,7 +146,7 @@
                         <div class="member-img">
                           <img src="assets/img/team/favian.jpg" class="img-fluid" alt="">
                           <div class="social">
-                            <a href="https://github.com/favianapta"><i class="bi bi-github"></i></a>
+                            <a href="https://github.com/favianapta"><i class="bi bi-github" style="font-size: 20px;"></i></a>
                           </div>
                         </div>
                         <div class="member-info">

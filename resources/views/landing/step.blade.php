@@ -3114,7 +3114,7 @@ style="text-align: left; padding-top: 18px;">
                         <th>∅𝑗4</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
+                <tbody id="table-body" class="example">
                     
                     <tr>
                         <td class="text-center"
@@ -4942,6 +4942,9 @@ style="text-align: left; padding-top: 18px;">
     .buttonCustom:hover {
         background-color: #fb6340; /* background orange ketika di hover */
         color: #fff; /* warna teks putih ketika di hover */
+    }
+    .example p{
+        font-size: 14px;
     }
 </style>
 @endsection
