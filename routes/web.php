@@ -33,10 +33,13 @@ Route::get('/landing', function () {
 Route::get('/psi', function () {
 	return view('landing.psi');
 });
+Route::get('/csv', function () {
+	return view('landing.csv');
+});
 Route::get('/how-it-works', function () {
 	return view('landing.step');
 });
-
+Route::post('/csvStore', [CasesController::class, 'csvStore'])->name('cases.csvStore');
 Route::post('/cases', [CasesController::class, 'store'])->name('cases.store');
 Route::get('/result', [CasesController::class, 'normalizing'])->name('cases.normalizing');
 

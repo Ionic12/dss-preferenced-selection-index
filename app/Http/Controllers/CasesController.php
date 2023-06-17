@@ -6,9 +6,8 @@ use App\Models\Cases;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use SebastianBergmann\CodeCoverage\Report\Xml\Totals;
-
-use function Ramsey\Uuid\v1;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\console;
 
 class CasesController extends Controller
 {
@@ -380,19 +379,19 @@ class CasesController extends Controller
         
         // menyimpan hasil penjumlahan ke dalam database
         DB::table('sum1')->updateOrInsert(
-            ['cases_id' => $primarykey],
-            [
-                'm1' => $total_n1,
-                'm2' => $total_n2,
-                'm3' => $total_n3,
-                'm4' => $total_n4,
-                'm5' => $total_n5,
-                'm6' => $total_n6,
-                'm7' => $total_n7,
-                'm8' => $total_n8,
-                'm9' => $total_n9,
-                'm10' => $total_n10,
-            ]
+        ['cases_id' => $primarykey],
+        [
+        'm1' => $total_n1,
+        'm2' => $total_n2,
+        'm3' => $total_n3,
+        'm4' => $total_n4,
+        'm5' => $total_n5,
+        'm6' => $total_n6,
+        'm7' => $total_n7,
+        'm8' => $total_n8,
+        'm9' => $total_n9,
+        'm10' => $total_n10,
+        ]
         );
         
         // menghitung rata - rata
@@ -775,5 +774,50 @@ class CasesController extends Controller
         'psijoin' => $psijoin,
         'determinejoin' => $determinejoin,
         'determine' => $determine]);
+    }
+    public function csvStore(Request $request)
+    {
+        // Validate the form
+        $request->validate([
+            'csv_file' => 'required|mimes:csv,txt',
+        ]);
+    
+        if ($request->hasFile('csv_file')) {
+            $file = $request->file('csv_file');
+    
+            // Move the uploaded file to the public/csv directory with a custom name
+            $filePath = $file->storeAs('csv', 'file.csv', 'public');
+    
+            // Get the absolute path to the uploaded CSV file
+            $absolutePath = Storage::disk('public')->path('csv/file.csv');
+    
+            // Read the CSV file
+            $csvData = $this->readCSV($absolutePath);
+    
+            // Example: Pass CSV data to the form view
+            return view('landing.psicsv', compact('csvData'))->with('success', 'CSV file uploaded successfully.');
+        }
+    
+        return back()->with('error', 'No CSV file found.');
+    }
+    
+    private function readCSV($filePath)
+    {
+        $csvData = [];
+    
+        // Open the CSV file
+        $file = fopen($filePath, 'r');
+    
+        if ($file) {
+            // Read each line from the CSV file
+            while (($rowData = fgetcsv($file)) !== false) {
+                $csvData[] = $rowData;
+            }
+    
+            // Close the CSV file
+            fclose($file);
+        }
+    
+        return $csvData;
     }
 }

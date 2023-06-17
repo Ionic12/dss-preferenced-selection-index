@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <p style="font-size: 13px">Please enter the job choices that you have obtained in this form to continue the process.</p>
+                                                    <p style="font-size: 13px">Please enter the job choices that you have obtained in this form to continue the process. <a style="text-decoration: none; color: #fb6340;" href="/csv">Using CSV?</a></p>
                                                 </div>
                                             </div> 
                                             <script>
@@ -118,20 +118,6 @@
                                             // Hide the Next button initially
                                             nextButton.style.display = 'none';
                                         </script>
-                                        {{-- <input type="button" id="doneButton" name="done" class="done action-button-previous" value="Fill" onclick="fillZero1()"/>
-                                        <script>
-                                            function fillZero1() {
-                                                // Mendapatkan nilai dari setiap input field a1c1 hingga a20c10
-                                                for (let i = 1; i <= 20; i++) {
-                                                    let inputId1 =  `alternative${i}`;
-                                                    let value1 = $('#'+inputId1).val();
-                                                    // Jika nilai kosong, maka diisi dengan 0
-                                                    if (value1 === '') {
-                                                        $('#' + inputId1).val('0');
-                                                    }
-                                                }
-                                            }
-                                        </script> --}}
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
@@ -216,11 +202,8 @@
                                         </div> 
                                         <input type="submit" name="next" class="next action-button" value="Submit" />
                                         <script>
-                                            // Get all input fields and the Submit button
                                             const inputs3 = document.querySelectorAll('input[type="number"]');
                                             const submitButton = document.querySelector('input[type="submit"]');
-                                            
-                                            // Function to check if all input fields are filled
                                             function checkInputs3() {
                                                 let isValid = true;
                                                 inputs3.forEach(input => {
@@ -231,8 +214,6 @@
                                                 });
                                                 return isValid;
                                             }
-                                            
-                                            // Add event listener to inputs
                                             inputs3.forEach(input => {
                                                 input.addEventListener('input', () => {
                                                     if (checkInputs3()) {
@@ -242,49 +223,9 @@
                                                     }
                                                 });
                                             });
-                                            
-                                            // Hide the Submit button initially
                                             submitButton.style.display = 'none';
                                         </script>
-                                        {{-- <input type="button" id="doneButton" name="done" class="done action-button-previous" value="Fill" onclick="fillZero()"/>
-                                        <script>
-                                            function fillZero() {
-                                                // Mendapatkan nilai dari setiap input field a1c1 hingga a20c10
-                                                for (let i = 1; i <= 20; i++) {
-                                                    for (let j = 1; j <= 10; j++) {
-                                                        let inputId = 'a'+i+'c'+j;
-                                                        let value = $('#'+inputId).val();
-                                                        console.log(value)
-                                                        
-                                                        // Jika nilai kosong, maka diisi dengan 0
-                                                        if (value === '') {
-                                                            $('#' + inputId).val('0');
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        </script> --}}
                                         <input type="button" id="previousButton2" name="previous" class="previous action-button-previous" value="Previous"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <div class="form-card">
-                                            <h2 class="orange-text text-center mt-3"><strong>SUCCESS !</strong></h2> <br>
-                                            <div class="row justify-content-center">
-                                                <div class="col-8 mt-3"> <div class="success-checkmark">
-                                                    <div class="check-icon">
-                                                        <span class="icon-line line-tip"></span>
-                                                        <span class="icon-line line-long"></span>
-                                                        <div class="icon-circle"></div>
-                                                        <div class="icon-fix"></div>
-                                                    </div>
-                                                </div> </div>
-                                            </div> <br>
-                                            <div class="row justify-content-center">
-                                                <div class="col-7 text-center">
-                                                    <h5 class="white-text text-center">You have successfully performed DSS <br></h5>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </fieldset>
                                 </form>
                             </div>
